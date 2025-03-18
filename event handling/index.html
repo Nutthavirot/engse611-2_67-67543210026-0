@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Event Handling</title>
+        <style>
+            .gallery-container{
+                width: 100%;
+                margin: auto;
+                overflow: hidden;
+            }
+            .gallery {
+                display: flex;
+                transition: tranform 0.5s ease-in-out;
+            }
+            .gallery img {
+                width: 150px;
+                height:"150px";
+                margin: 0 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gallery-container">
+             <img src="https://picsum.photos/id/237/200/300" alt="image 1" style="width: 20%;">
+            <div class="gallery">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" onclick="myFunction()" src="https://picsum.photos/seed/picsum/200/300" alt="Smiley">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://picsum.photos/200/300?grayscale" alt="image 3">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://picsum.photos/200/300/?blur" alt="image 4">
+                <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="image 5">
+            </div>
+        </div>
+        <script src="gallery.js"></script>
+    </body>
+</html>
